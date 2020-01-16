@@ -23,6 +23,8 @@ public class CityDistances{
         distancesver2 = new int[3][3];
         // Copy distances to distancesver2 (deep copy, not a shallow copy)
         
+               
+       // Print out distancesver2 to verify that it is correct
             
        }
 }

@@ -6,7 +6,7 @@ A distance table
   NewYork  787    214     0
 */
 
-public class Main{
+public class TwoDimensionalArrayEx1{
      public static void main(String []args){
         System.out.println("City Distance Example");
         // Define a matrix representating the distance between cities

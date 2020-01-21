@@ -44,6 +44,32 @@ Here are some examples of the true cases.
 import java.util.Scanner;
 
 public class PatternRecognition{
+     
+     public static boolean ExistRowPattern(int[][] thedigits){
+     // For each row, check whether it contains four consecutive digits. 
+        for (int rindex = 0; rindex < 6; rindex++){
+               
+               for (int begincolindex = 0; begincolindex <= 3; begincolindex++){
+                    // we will check thedigits[rindex, begincolindex]
+                    //               thedigits[rindex, begincolindex+1]
+                    //               thedigits[rindex, begincolindex+2]
+                    //               thedigits[rindex, begincolindex+3]
+                    int digit2compare = thedigits[rindex][begincolindex];
+                    for (int comparecolindex = begincolindex+1; comparecolindex <= begincolindex + 3;
+                              comparecolindex++){
+                         int curdigit2compare = thedigits[rindex][comparecolindex];
+                         if (curdigit2compare == digit2compare){
+                              if (comparecolindex == begincolindex + 3)
+                                   return true;
+                              continue;
+                         }
+                         else break;
+                    }
+                         
+                    
+               }
+        }  
+     }
 
      public static void main(String []args){
         // Define a scannner, explain this one 
@@ -65,7 +91,8 @@ public class PatternRecognition{
             }
         }
         
-        // For each row, check whether it contains four consecutive digits. 
+        
+          
 
         // For each column, check whether it contains four consecutive digits.   
 

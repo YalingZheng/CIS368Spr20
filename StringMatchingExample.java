@@ -9,6 +9,14 @@ public class StringMatchingExample {
     // how do you match format "216.333.4449"?
     
     // how do you match format "(216)333-4449"? 
+    
+    // what will be the value of s
+    String s = "a+b$#c".replaceAll("[$+#]", "NNN");
+    
+    // what will be the following result?
+    
+    String[] tokens = "Java    C, great!    ".split("[ ,!]");
+    
   
   }
 

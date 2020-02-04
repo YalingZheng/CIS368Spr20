@@ -11,8 +11,10 @@ public class MyStringBuilder2 {
 	};
 	public MyStringBuilder2 insert(int offset, MyStringBuilder2 s) {
 		// modify on mystring
-		if (offset < 0)
+		if (offset < 0){
+			this.mystring = s.toString() + this.mystring;
 			return this;
+		}
 		if (offset >= mystring.length()) {
 			// change mystring
 			mystring += s.toString();

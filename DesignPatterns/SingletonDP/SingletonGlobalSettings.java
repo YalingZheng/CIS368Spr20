@@ -13,18 +13,18 @@ public class SingletonGlobalSettings {
 			serverip = defaultIP;
 	}
 	
-	SingletonGlobalSettings(String ip){
+	private SingletonGlobalSettings(String ip){
 		serverip = ip;
 	}
 	public synchronized static SingletonGlobalSettings getInstance() {
 		return globalsettings;
 	}
 	
-	public synchronized static String getServerIP() {
+	public static String getServerIP() {
 		return serverip;
 	}
 
-	public void setServerIP(String ip) {
+	public synchronized void setServerIP(String ip) {
 		serverip = ip;
 	}
 	

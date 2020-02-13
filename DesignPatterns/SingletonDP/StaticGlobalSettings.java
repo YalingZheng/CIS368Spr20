@@ -1,17 +1,15 @@
 package SingletonDP;
 
-/** GlobalSettings in which all data members and methods are static */
-
-public class GlobalSettings {
+public class StaticGlobalSettings {
 	private static String serverip;
 	private static String defaultIP = "172.168.1.1";
 	private static String defaultPrefixIP = "172.168.1.";
 	
-	GlobalSettings(){
-		GlobalSettings.serverip = defaultIP;
+	StaticGlobalSettings(){
+		StaticGlobalSettings.serverip = defaultIP;
 	}
 	
-	GlobalSettings(String ip){
+	StaticGlobalSettings(String ip){
 		serverip = ip;
 	}
 	

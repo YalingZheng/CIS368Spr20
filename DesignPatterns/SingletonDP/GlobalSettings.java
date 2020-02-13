@@ -1,5 +1,7 @@
 package SingletonDP;
 
+/** GlobalSettings in which all data members and methods are static */
+
 public class GlobalSettings {
 	private static String serverip;
 	private static String defaultIP = "172.168.1.1";

@@ -13,7 +13,7 @@ public class LazySingletonGlobalSettings {
 			serverip = defaultIP;
 	}
 	
-	LazySingletonGlobalSettings(String ip){
+	private LazySingletonGlobalSettings(String ip){
 		serverip = ip;
 	}
 	public synchronized static LazySingletonGlobalSettings getInstance() {
@@ -22,11 +22,11 @@ public class LazySingletonGlobalSettings {
 		return globalsettings;
 	}
 	
-	public synchronized static String getServerIP() {
+	public  static String getServerIP() {
 		return serverip;
 	}
 
-	public void setServerIP(String ip) {
+	public synchronized void setServerIP(String ip) {
 		serverip = ip;
 	}
 	

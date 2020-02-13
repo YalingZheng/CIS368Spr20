@@ -18,14 +18,13 @@ public class TestGlobalSettings {
 			agents[i].start();
 		}
 		
-		for (int i = 0; i < arrThreads.size(); i++) 
-        {
-            try {
+		for (int i = 0; i < arrThreads.size(); i++){
+         	   try {
 				arrThreads.get(i).join();
 			} catch (InterruptedException e) {
 				e.printStackTrace();
-			} 
-        } 
+			} // end of try
+       		 } // end of for 
 		
 		SingletonGlobalSettings gs = SingletonGlobalSettings.getInstance();
 		SingletonGlobalSettings gs2 = gs.clone();

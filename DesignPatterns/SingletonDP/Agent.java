@@ -24,8 +24,8 @@ public class Agent extends Thread {
 			System.out.println("Regular GlobalSettings CHANGE Server IP to " + gs0.getServerIP());	
 			
 			// change the setting method 1 - a singleton in which all data fields and methods are static
-			GlobalSettings.setServerIP(GlobalSettings.getDefaultPrefixIP() + this.id);
-			System.out.println("Static Data Fields and Methods CHANGE Server IP to " + GlobalSettings.getServerIP());
+			StaticGlobalSettings.setServerIP(StaticGlobalSettings.getDefaultPrefixIP() + this.id);
+			System.out.println("Static Data Fields and Methods CHANGE Server IP to " + StaticGlobalSettings.getServerIP());
 			
 			// change the setting method 2 - a singleton in which only single instance is allowed.
 			SingletonGlobalSettings gs2 = SingletonGlobalSettings.getInstance();
@@ -41,7 +41,7 @@ public class Agent extends Thread {
 			
 			GlobalSettings0 g0 = new GlobalSettings0();
 			System.out.println("Regular GlobalSettings get - Server IP is " + g0.getServerIP());
-			System.out.println("Static Data Fields and Methods get - Server IP is " + GlobalSettings.getServerIP());			
+			System.out.println("Static Data Fields and Methods get - Server IP is " + StaticGlobalSettings.getServerIP());			
 			//SingletonGlobalSettings g2 = SingletonGlobalSettings.getInstance();
 			System.out.println("Singleton Design Pattern get - Server IP is " + SingletonGlobalSettings.getServerIP());
 			System.out.println("*************************************");

@@ -5,7 +5,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 public class ZipJpgFiles {	
-	private static byte[] readBytesFromFile(String filePath) {
+   private static byte[] readBytesFromFile(String filePath) {
         FileInputStream fileInputStream = null;
         byte[] bytesArray = null;
         try {
@@ -28,7 +28,7 @@ public class ZipJpgFiles {
         return bytesArray;
     }
 
-	public static void main(String args[]) {
+   public static void main(String args[]) {
 		int numfiles = 4;
 		JpgFile[] jpgfiles = new JpgFile[numfiles];
 		String[] JpgFileLocations = { "src\\images\\Picture1.jpg", "src\\images\\Picture2.jpg", 

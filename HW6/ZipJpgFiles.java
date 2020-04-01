@@ -46,8 +46,7 @@ public class ZipJpgFiles {
 			oos = new ObjectOutputStream(fout);
 			oos.writeInt(numfiles);
 			for (int i = 0; i < numfiles; i++) {
-				jpgfiles[i] = new JpgFile("Picture" + i + ".jpg", new File(JpgFileLocations[i]));
-				oos.writeUTF(jpgfiles[i].getName());
+				oos.writeUTF("Picture" + i + ".jpg");
 				// convert the file to byte[]
 				
 				byte[] bFile = readBytesFromFile(JpgFileLocations[i]);
@@ -57,10 +56,8 @@ public class ZipJpgFiles {
 			oos.flush();
 			oos.close();
 			System.out.println("successfully written file to data ZappedJpgFiles.dat");
-
 		} catch (IOException e) {
 			System.out.println("IOException. Error - " + e.getMessage());
 		}
-
 	}
 }
